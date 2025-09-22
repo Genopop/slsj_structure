@@ -1,0 +1,8 @@
+{
+    "wd": "/path/to/main_project/",
+    "balsac_genealogy": "/path/to/balsac_genealogy.asc",
+    "cartagene_balsac_matches": "/path/to/cartagene_balsac_matches.geneID",
+    "demography_information": "/path/to/demographical_information.csv",
+    "geography_definitions": "/path/to/info_about_marriage_locations.csv",
+    "latitudes_longitudes": "/path/to/territory_central_points.csv"
+}
