@@ -154,7 +154,7 @@ city_to_water_boundary = {
     "Saint-Ludger-de-Milot": "Mistassini-Péribonka",
     "Saint-Méthode": "Ashuapmushuan-Mistassini",
     "Saint-Nazaire": "East of Lac Saint-Jean",
-    "Saint-Prime": "Ashuapmushuan-Mistassini",
+    "Saint-Prime": "Métabetchouane-Ashuapmushuan",
     "Saint-Stanislas-du-Lac-Saint-Jean": "Mistassini-Péribonka",
     "Saint-Thomas-Didyme": "Ashuapmushuan-Mistassini",
     "Sainte-Hedwidge": "Métabetchouane-Ashuapmushuan",
