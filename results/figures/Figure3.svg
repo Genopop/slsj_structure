@@ -8,7 +8,7 @@
    height="276.0665"
    viewBox="0 0 680.31494 276.0665"
    sodipodi:docname="Figure3.svg"
-   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    inkscape:export-filename="Figure3.pdf"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
@@ -29575,10 +29575,10 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1"
-     inkscape:cx="337"
+     inkscape:cx="337.5"
      inkscape:cy="168"
      inkscape:window-width="1280"
-     inkscape:window-height="717"
+     inkscape:window-height="713"
      inkscape:window-x="0"
      inkscape:window-y="29"
      inkscape:window-maximized="1"
@@ -50976,22 +50976,12 @@
        xml:space="preserve"
        x="553.92133"
        y="129.52934"
-       style="font-size:6.66666667px;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.626278"><tspan
          id="tspan5687"
-         style="font-variant:normal;font-weight:normal;font-size:6.66666667px;font-family:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-style:normal;font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.626278"
          x="553.92133"
-         dx="0 0 0 -0.21528293 0 0 0 0 0 0 0 0 0 0 0 -0.13699822 3.1292353"
-         y="129.52934">La-Belle-RivièreMétabetchouane</tspan></text>
-    <g
-       id="g5688"
-       transform="matrix(0.46970821,0,0,0.46970821,0,7.7918482e-6)">
-      <path
-         d="M 49,309 H 451 V 239 H 49 Z"
-         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         transform="matrix(0.01333333,0,0,-0.01333333,1283.1737,275.76552)"
-         clip-path="url(#clipPath5687)"
-         id="path5688" />
-    </g>
+         dx="0 0 0 -0.21528293 0 0 0 0 0 0 0 0 0 0 0"
+         y="129.52934">La-Belle-Rivière–Métabetchouane</tspan></text>
     <path
        id="path5689"
        d="m 536.38558,138.97244 h 12.52556 v -4.38395 h -12.52556 z"
