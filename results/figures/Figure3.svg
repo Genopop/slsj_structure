@@ -40039,13 +40039,13 @@
     <text
        id="text2825"
        xml:space="preserve"
-       x="125.06282"
+       x="123.06282"
        y="270.25583"
-       style="font-size:6.66666667px;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
-         id="tspan2825"
-         style="font-variant:normal;font-weight:normal;font-size:6.66666667px;font-family:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-style:normal;font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         x="125.06282"
-         y="270.25583">UMAP1</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.626278"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="123.06282"
+         y="270.25583">UMAP 1</tspan></text>
     <path
        id="path2825"
        d="M 23.51281,252.55371 H 21.320838"
@@ -40200,13 +40200,13 @@
        id="text2836"
        xml:space="preserve"
        transform="rotate(-90)"
-       x="-140.54572"
+       x="-142.54572"
        y="9.2649946"
-       style="font-size:6.66666667px;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
-         id="tspan2836"
-         style="font-variant:normal;font-weight:normal;font-size:6.66666667px;font-family:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-style:normal;font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         x="-140.54572"
-         y="9.2649946">UMAP2</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.626278"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="-142.54572"
+         y="9.2649946">UMAP 2</tspan></text>
     <path
        id="path2836"
        d="M 23.51281,252.55371 V 6.500582"
@@ -50670,13 +50670,13 @@
     <text
        id="text5663"
        xml:space="preserve"
-       x="395.22742"
+       x="393.22742"
        y="270.25583"
-       style="font-size:6.66666667px;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
-         id="tspan5663"
-         style="font-variant:normal;font-weight:normal;font-size:6.66666667px;font-family:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-style:normal;font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         x="395.22742"
-         y="270.25583">UMAP1</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.626278"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         x="393.22742"
+         y="270.25583">UMAP 1</tspan></text>
     <path
        id="path5663"
        d="m 293.6774,252.55371 h -2.19197"
@@ -50866,13 +50866,13 @@
        id="text5678"
        xml:space="preserve"
        transform="rotate(-90)"
-       x="-140.54572"
+       x="-142.54572"
        y="279.4296"
-       style="font-size:6.66666667px;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"><tspan
-         id="tspan5678"
-         style="font-variant:normal;font-weight:normal;font-size:6.66666667px;font-family:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.626278;-inkscape-font-specification:'Helvetica, Normal';font-style:normal;font-stretch:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         x="-140.54572"
-         y="279.4296">UMAP2</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.626278"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="-142.54572"
+         y="279.4296">UMAP 2</tspan></text>
     <path
        id="path5678"
        d="M 293.6774,252.55371 V 6.500582"
