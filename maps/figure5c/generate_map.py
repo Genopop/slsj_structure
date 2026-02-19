@@ -18,7 +18,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import matplotlib.patheffects as pe
-from shapely.geometry import box, LineString, MultiLineString, Polygon
+from shapely.geometry import box, LineString, MultiLineString, Polygon, Point
 from shapely.ops import linemerge, unary_union
 from matplotlib.patches import Wedge
 from scipy.interpolate import make_interp_spline
@@ -601,6 +601,101 @@ def plot_horizontal_text(
         path_effects=[pe.withStroke(linewidth=3, foreground="white")]
     )
 
+
+def draw_graticule(
+    ax: plt.Axes, 
+    bounds: Tuple[float, float, float, float], 
+    target_crs: str,
+    lon_step: float, 
+    lat_step: float,
+    fontsize: int = 8,
+    color: str = '#aaaaaa',
+    zorder: int = 1,
+    exclusion_zones: List[Polygon] = None
+) -> None:
+    """
+    Draws a latitude/longitude grid overlay on a projected axis.
+    Omits text labels that overlap with the borders (corners) or exclusion zones.
+    """
+    import pyproj
+
+    minx, miny, maxx, maxy = bounds
+    width = maxx - minx
+    height = maxy - miny
+    
+    # Define margin for "touching borders" (corners). 
+    x_margin = width * 0.05
+    y_margin = height * 0.05
+    
+    # Create a transformer to get lat/lon bounds
+    project = pyproj.Transformer.from_crs(target_crs, SOURCE_CRS, always_xy=True).transform
+    lon_min, lat_min = project(minx, miny)
+    lon_max, lat_max = project(maxx, maxy)
+    
+    # Define grid ranges
+    lons = np.arange(np.floor(lon_min), np.ceil(lon_max) + lon_step, lon_step)
+    lats = np.arange(np.floor(lat_min), np.ceil(lat_max) + lat_step, lat_step)
+    
+    # Helper to project lines back to map CRS
+    to_target = pyproj.Transformer.from_crs(SOURCE_CRS, target_crs, always_xy=True).transform
+    
+    # Draw Meridians (Vertical-ish lines)
+    for lon in lons:
+        lat_points = np.linspace(lat_min, lat_max, 50)
+        xs, ys = to_target([lon]*50, lat_points)
+        
+        ax.plot(xs, ys, color=color, linewidth=0.5, linestyle=':', zorder=zorder-0.5, alpha=0.6)
+        
+        # Label at the bottom edge
+        valid_indices = np.where((xs >= minx) & (xs <= maxx) & (ys >= miny))[0]
+        if len(valid_indices) > 0:
+            idx = valid_indices[0] 
+            x_pos, y_pos = xs[idx], miny + (maxy-miny)*0.01
+            
+            # Check 1: Corner proximity
+            if x_pos < minx + x_margin or x_pos > maxx - x_margin:
+                continue
+                
+            # Check 2: Exclusion zones
+            if exclusion_zones:
+                p = Point(x_pos, y_pos)
+                if any(poly.contains(p) for poly in exclusion_zones):
+                    continue
+
+            if miny <= ys[idx] <= maxy + (maxy-miny)*0.1:
+                label = f"{abs(lon):.1f}°W" if lon < 0 else f"{lon:.1f}°E"
+                ax.text(x_pos, y_pos, label, 
+                        fontsize=fontsize, color=color, ha='center', va='bottom', zorder=zorder)
+
+    # Draw Parallels (Horizontal-ish lines)
+    for lat in lats:
+        lon_points = np.linspace(lon_min, lon_max, 50)
+        xs, ys = to_target(lon_points, [lat]*50)
+        
+        ax.plot(xs, ys, color=color, linewidth=0.5, linestyle=':', zorder=zorder-0.5, alpha=0.6)
+        
+        # Label at the left edge
+        valid_indices = np.where((ys >= miny) & (ys <= maxy) & (xs >= minx))[0]
+        if len(valid_indices) > 0:
+            idx = valid_indices[0] 
+            x_pos, y_pos = minx + (maxx-minx)*0.01, ys[idx]
+            
+            # Check 1: Corner proximity
+            if y_pos < miny + y_margin or y_pos > maxy - y_margin:
+                continue
+
+            # Check 2: Exclusion zones
+            if exclusion_zones:
+                p = Point(x_pos, y_pos)
+                if any(poly.contains(p) for poly in exclusion_zones):
+                    continue
+
+            if minx <= xs[idx] <= maxx + (maxx-minx)*0.1:
+                label = f"{abs(lat):.1f}°N"
+                ax.text(x_pos, y_pos, label, 
+                        fontsize=fontsize, color=color, ha='left', va='center', zorder=zorder)
+
+
 def draw_pie_chart(ax: plt.Axes, center_x: float, center_y: float, radius: float,
                    sizes: List[float], colors: List[str], edge_color: str,
                    start_angle: float = 90) -> None:
@@ -644,7 +739,8 @@ def create_main_map(agg_data: pd.DataFrame, lakes: gpd.GeoDataFrame,
                    osm_water: List[Polygon],
                    rivers_proj: gpd.GeoDataFrame,
                    viewport_box: Polygon,
-                   bounds: Tuple[float, float, float, float]) -> Tuple[plt.Figure, plt.Axes]:
+                   bounds: Tuple[float, float, float, float],
+                   exclusion_zones: List[Polygon] = None) -> Tuple[plt.Figure, plt.Axes]:
     """Create the main map figure."""
     fig, ax = plt.subplots(figsize=FIGURE_SIZE)
     ax.set_facecolor(BACKGROUND_COLOR)
@@ -705,10 +801,15 @@ def create_main_map(agg_data: pd.DataFrame, lakes: gpd.GeoDataFrame,
     ax.set_ylim(miny - BUFFER_METERS, maxy + BUFFER_METERS)
     ax.set_xticks([])
     ax.set_yticks([])
+
+    # Add Lat/Lon Graticule with exclusion checks
+    draw_graticule(ax, (minx - BUFFER_METERS, miny - BUFFER_METERS, maxx + BUFFER_METERS, maxy + BUFFER_METERS), 
+                   TARGET_CRS, lon_step=0.5, lat_step=0.25, fontsize=7, color='#777777',
+                   exclusion_zones=exclusion_zones)
     
     # Add title
     ax.text(
-        0.5, 0.02,
+        0.5, 0.04,
         "Saguenay–Lac-Saint-Jean",
         transform=ax.transAxes,
         ha='center',
@@ -1001,7 +1102,8 @@ def main():
     fig, ax = create_main_map(
         agg_data, lakes_final, rivers_final, ocean_final,
         osm_rivers_final, osm_water_final, rivers_proj, viewport_box,
-        gdf_proj.total_bounds
+        gdf_proj.total_bounds,
+        exclusion_zones=None
     )
     
     print("Adding water body labels...")
@@ -1010,9 +1112,8 @@ def main():
     print("Adding legends...")
     add_legends(fig, ax, agg_data)
     
-    print("Saving outputs...")
-    plt.savefig("map_slsj_genetic.svg", dpi=300, format='svg', bbox_inches='tight')
-    plt.savefig("map_slsj_genetic.png", dpi=300, format='png', bbox_inches='tight')
+    print("Saving output...")
+    plt.savefig("Figure5c.pdf", dpi=300, bbox_inches='tight')
     
     print()
     print("=" * 60)
