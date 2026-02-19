@@ -4659,8 +4659,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.3526413"
-     inkscape:cx="160.05721"
-     inkscape:cy="178.90921"
+     inkscape:cx="160.05722"
+     inkscape:cy="178.90922"
      inkscape:window-width="1280"
      inkscape:window-height="713"
      inkscape:window-x="0"
@@ -6896,12 +6896,12 @@
     <text
        id="text700"
        xml:space="preserve"
-       x="22.163128"
+       x="34.163128"
        y="347.46783"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.515705"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.33333px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.515705"><tspan
          id="tspan700"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.515705"
-         x="22.163128"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.33333px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.515705"
+         x="34.163128"
          dx="0 0 0 0"
          y="347.46783">Saguenay–Lac-Saint-Jean</tspan></text>
     <g
@@ -9879,12 +9879,12 @@
     <text
        id="text1455"
        xml:space="preserve"
-       x="-15.664402"
+       x="-13.664402"
        y="106.60501"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.515705"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.33333px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.515705"><tspan
          id="tspan1455"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.515705"
-         x="-15.664402"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.33333px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.515705"
+         x="-13.664402"
          y="106.60501">Québec</tspan></text>
   </g>
 </svg>
